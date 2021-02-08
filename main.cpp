@@ -47,8 +47,7 @@ int main()
 //    ifstream fin;
 //    fin.open("input.txt");
     const int n = 100000; //189766
-    //fin >> n;
-    //cin >> n;
+
     auto* array_example = new int[n];
     auto* array = new int[n];
 
@@ -57,6 +56,10 @@ int main()
         array[i] = array_example[i];
     }
 
+    vector<int> v = kmp("bc", "abcabcabcabcabacbcabbbabacaca");
+    for (unsigned int i = 0; i<v.size(); ++i) {
+        cout << v[i] << " ";
+    }
 
 
 //    unsigned int start_time = clock();
@@ -97,21 +100,22 @@ int main()
 //    get_time(shakerSort, array, n);
 //    refill_array(array, array_example, n);
 
-    println("heap sort");
-    get_time(heapSort, array, n);
+//    println("heap sort");
+//    get_time(heapSort, array, n);
+
 //    refill_array(array, array_example, n);
 
-    srand(static_cast<unsigned int>(time(0)));
-    int random_index = static_cast<int> (rand() % n);
-    println("linear search");
-    println(random_index);
-    println(linear(array, n, array[random_index]));
-    println("binary search");
-    println(binary(array, n, array[random_index]));
-    println("interpolation search");
-    println(interpolation(array, n, array[random_index]));
-    println("fibonacci search");
-    println(fibonacci(array, n, array[random_index]));
+//    srand(static_cast<unsigned int>(time(0)));
+//    int random_index = static_cast<int> (rand() % n);
+//    println("linear search");
+//    println(random_index);
+//    println(linear(array, n, array[random_index]));
+//    println("binary search");
+//    println(binary(array, n, array[random_index]));
+//    println("interpolation search");
+//    println(interpolation(array, n, array[random_index]));
+//    println("fibonacci search");
+//    println(fibonacci(array, n, array[random_index]));
 //    unsigned int end_time = clock();
 
 //    for (size_t i = 0; i < n; i++)
