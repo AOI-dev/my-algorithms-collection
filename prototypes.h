@@ -4,6 +4,7 @@
 
 #ifndef ALGORITHMS_PROTOTYPES_H
 #define ALGORITHMS_PROTOTYPES_H
+#include "libs.h"
 typedef int array_t;
 //void swap(array_t * a, array_t * b);
 void selectionSort_1(array_t* array, int n);
@@ -22,7 +23,7 @@ int binary(array_t* array, int n, array_t requested_elem);
 int interpolation(array_t* a, int n, array_t requested_elem);
 int trie(array_t* array, int n, array_t requested_elem);
 int fibonacci(array_t* array, int n, array_t requested_elem);
-
+std::vector<int> kmp(std::string, std::string);
 void euclidean_algorithm();
 void eratosthenes_sieve();
 
