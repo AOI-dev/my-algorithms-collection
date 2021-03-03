@@ -1,18 +1,17 @@
-
-#include "prototypes.h"
 #include "libs.h"
+#include "prototypes.h"
 
 using namespace std;
-
-void get_time(void (* func)(array_t*, int, int), array_t* array, int left, int right)
+template <typename T>
+void get_time(void (* func)(T*, int, int), T* array, int left, int right)
 {
     unsigned int start_time = clock();
     func(array, left, right);
     unsigned int end_time = clock();
     cout << end_time-start_time << " ms\n";
 };
-
-void get_time(void (* func)(array_t*, int), array_t* array, int length)
+template <typename T>
+void get_time(void (* func)(T*, int), T* array, int length)
 {
     unsigned int start_time = clock();
     func(array, length);
@@ -24,8 +23,8 @@ void println(std::string s)
 {
     std::cout << s << '\n';
 }
-
-void refill_array(array_t* array, array_t* array_example, int n)
+template <typename T>
+void refill_array(T* array, T* array_example, int n)
 {
     for (size_t i = 0; i<n; i++)
         array[i] = array_example[i];
@@ -56,10 +55,10 @@ int main()
         array[i] = array_example[i];
     }
 
-    vector<int> v = kmp("bc", "abcabcabcabcabacbcabbbabacaca");
-    for (unsigned int i = 0; i<v.size(); ++i) {
-        cout << v[i] << " ";
-    }
+//    vector<int> v = kmp("bc", "abcabcabcabcabacbcabbbabacaca");
+//    for (unsigned int i = 0; i<v.size(); ++i) {
+//        cout << v[i] << " ";
+//    }
 
 
 //    unsigned int start_time = clock();
@@ -100,8 +99,8 @@ int main()
 //    get_time(shakerSort, array, n);
 //    refill_array(array, array_example, n);
 
-//    println("heap sort");
-//    get_time(heapSort, array, n);
+    println("heap sort");
+    get_time(heapSort, array, n);
 
 //    refill_array(array, array_example, n);
 

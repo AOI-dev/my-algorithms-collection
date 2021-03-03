@@ -2,7 +2,6 @@
 // Created by Олег Игоревич on 05.02.2021.
 //
 
-#include "..\prototypes.h"
 #include "..\libs.h"
 //моя версия
 
@@ -22,7 +21,7 @@
 //}
 
 //версия циклом while
-int binary(array_t* a, int n, array_t key) {
+template<typename T> T binary(T* a, int n, T key) {
     int l = -1;
     int r = n;
     while (l < r - 1) {

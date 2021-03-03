@@ -1,10 +1,10 @@
 //
 // Created by Олег Игоревич on 25.11.2020.
 //
-#include "..\prototypes.h"
+
 #include "..\libs.h"
 
-void selectionSort_1(array_t* array, int n)
+template<typename T>void selectionSort_1(T* array, int n)
 {
     for (size_t i = 0; i<=n-2; i++) {
         for (size_t j = i+1; j<=n-1; j++) {
@@ -14,7 +14,7 @@ void selectionSort_1(array_t* array, int n)
     }
 }
 
-void selectionSort_2(array_t* array, int n)
+template<typename T> void selectionSort_2(T* array, int n)
 {
     int min;
     for (int i = 0; i<=n-2; i++) {

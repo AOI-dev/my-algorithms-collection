@@ -2,10 +2,9 @@
 // Created by Олег Игоревич on 25.11.2020.
 //
 
-#include "..\prototypes.h"
 #include "..\libs.h"
 
-void shakerSort(array_t* array, int n)
+template <typename T> void shakerSort(T* array, int n)
 {
     int left = 0;
     int right = n-1;

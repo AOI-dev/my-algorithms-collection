@@ -1,7 +1,6 @@
 //
 // Created by Олег Игоревич on 07.02.2021.
 //
-#include "..\prototypes.h"
 #include "..\libs.h"
 
 int* prefixFunction(std::string s) {

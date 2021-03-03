@@ -2,13 +2,12 @@
 // Created by Олег Игоревич on 05.02.2021.
 //
 
-#include "..\prototypes.h"
 #include "..\libs.h"
 
-int min(int x, int y) { return (x <= y) ? x : y; }
+template <typename T> bool min(T x, T y) { return (x <= y) ? x : y; }
 
 /* Returns index of x if present,  else returns -1 */
-int fibonacci(array_t arr[], int n, array_t x)
+template <typename T> int fibonacci(T arr[], int n, T x)
 {
     // Initialize fibonacci numbers
     int fibMMm2 = 0; // (m-2)'th Fibonacci No.

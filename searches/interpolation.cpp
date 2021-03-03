@@ -1,10 +1,10 @@
 //
 // Created by Олег Игоревич on 05.02.2021.
 //
-#include "..\prototypes.h"
+
 #include "..\libs.h"
 
-int interpolation(array_t* a, int n, array_t key)
+template<typename T> T interpolation(T* a, int n, T key)
 {
     int left = 0;  // левая граница поиска (будем считать, что элементы массива нумеруются с нуля)
     int right = n - 1;  // правая граница поиска

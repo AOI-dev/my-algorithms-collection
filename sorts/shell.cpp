@@ -2,10 +2,9 @@
 // Created by Олег Игоревич on 25.11.2020.
 //
 
-#include "..\prototypes.h"
 #include "..\libs.h"
 
-void shellSort(array_t* array, int n)
+template<typename T> void shellSort(T* array, int n)
 {
     int gap, i, j;
 

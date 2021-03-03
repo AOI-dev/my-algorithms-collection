@@ -2,10 +2,9 @@
 // Created by Олег Игоревич on 25.11.2020.
 //
 
-#include "..\prototypes.h"
 #include "..\libs.h"
 
-void heapify(array_t* array, int n, int i)
+template<typename T> void heapify(T* array, int n, int i)
 {
     int largest = i; // Initialize largest as root
     int l = 2*i+1; // left = 2*i + 1
@@ -24,7 +23,7 @@ void heapify(array_t* array, int n, int i)
     }
 }
 
-void heapSort(array_t* array, int n)
+template<typename T> void heapSort(T* array, int n)
 {
     // Build heap (rearrange array)
     for (int i = n/2-1; i>=0; i--)

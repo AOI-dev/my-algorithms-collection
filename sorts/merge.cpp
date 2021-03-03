@@ -2,15 +2,14 @@
 // Created by Олег Игоревич on 25.11.2020.
 //
 
-#include "..\prototypes.h"
 
-void merge(array_t* array, int l, int m, int r)
+template <typename T> void merge(T* array, int l, int m, int r)
 {
     int i, j, k, nl, nr;
     //size of left and right sub-arrays
     nl = m-l+1;
     nr = r-m;
-    array_t larr[nl], rarr[nr];
+    T larr[nl], rarr[nr];
     //fill left and right sub-arrays
     for (i = 0; i<nl; i++)
         larr[i] = array[l+i];
@@ -43,7 +42,7 @@ void merge(array_t* array, int l, int m, int r)
     }
 }
 
-void mergeSort(array_t* array, int l, int r)
+template <typename T> void mergeSort(T* array, int l, int r)
 {
 
     int m;
